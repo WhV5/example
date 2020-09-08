@@ -1,4 +1,4 @@
-### example
+### demo
 Map 锁 Goroutine Channel 示例
 
 #### Map
