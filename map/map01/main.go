@@ -1,85 +1,91 @@
+/**
+* @Author : henry
+* @Data: 2020-07-23 19:18
+* @Note: map 的初始化、 增删改查
+**/
+
 package main
 
 import "fmt"
 
 func main() {
 	////  先声明再初始化最后赋值
-	//// 先声明一个字典（map）名字叫做yinzhengjie。key所对应的数据类型是string，value对应的类型也是字符串
-	//var yinzhengjie map[string]string
-	//fmt.Printf("判断yinzhengjie字段是否为空:[%v]\n",yinzhengjie == nil)
-	//fmt.Printf("第一次查看yinzhengjie字典的值：[%v]\n",yinzhengjie)
+	//// 先声明一个字典（map）名字叫做henry。key所对应的数据类型是string，value对应的类型也是字符串
+	//var henry map[string]string
+	//fmt.Printf("判断henry字段是否为空:[%v]\n",henry == nil)
+	//fmt.Printf("第一次查看henry字典的值：[%v]\n",henry)
 	//
-	//yinzhengjie = make(map[string]string)
-	//fmt.Printf("再次判断yinzhengjie字典知否为空:[%v]\n",yinzhengjie == nil)
-	//fmt.Printf("第二次查看yinzhengjie字典的值：[%v]\n",yinzhengjie)
+	//henry = make(map[string]string)
+	//fmt.Printf("再次判断henry字典知否为空:[%v]\n",henry == nil)
+	//fmt.Printf("第二次查看henry字典的值：[%v]\n",henry)
 	//
-	//yinzhengjie["name"] = "尹正杰"
-	//fmt.Printf("yingzhengjie字典的类型为:[%v]\n",reflect.TypeOf(yinzhengjie))
-	//fmt.Printf("第三次查看yinzhengjie字典的值:[%v]\n",yinzhengjie)
+	//henry["name"] = "亨利"
+	//fmt.Printf("yingzhengjie字典的类型为:[%v]\n",reflect.TypeOf(henry))
+	//fmt.Printf("第三次查看henry字典的值:[%v]\n",henry)
 
 	////初始化之后再赋值
-	//yinzhengjie := make(map[string]int)
-	//yinzhengjie["yzj"] = 25
-	//fmt.Println(yinzhengjie)
+	//henry := make(map[string]int)
+	//henry["yzj"] = 25
+	//fmt.Println(henry)
 
 	////直接初始化赋值
-	//yinzhengjie := map[string]int{
-	//	"尹正杰":18,
+	//henry := map[string]int{
+	//	"亨利":18,
 	//	"饼干":20,
 	//}
-	//fmt.Println(yinzhengjie)
+	//fmt.Println(henry)
 
 	////字典的赋值操作
-	//yinzhengjie := make(map[int]string)
+	//henry := make(map[int]string)
 	//letter := []string{"a", "b", "c", "d", "e", "f", "g", "h"}
 	//for k, v := range letter {
-	//	yinzhengjie[7-k] = v
+	//	henry[7-k] = v
 	//}
-	//fmt.Println(yinzhengjie)
+	//fmt.Println(henry)
 
 	////字典的删除操作
-	//yinzhengjie := make(map[int]string)
+	//henry := make(map[int]string)
 	//letter := []string{"a", "b", "c", "d", "e", "f", "g", "h"}
 	//for k, v := range letter {
-	//	yinzhengjie[k] = v
+	//	henry[k] = v
 	//}
-	//fmt.Println(yinzhengjie)
+	//fmt.Println(henry)
 	//
 	//for i := 0; i < 4; i++ {
-	//	delete(yinzhengjie, i)
+	//	delete(henry, i)
 	//}
-	//fmt.Println(yinzhengjie)
+	//fmt.Println(henry)
 	//
-	//for k := range yinzhengjie {
-	//	delete(yinzhengjie, k)
+	//for k := range henry {
+	//	delete(henry, k)
 	//}
-	//fmt.Println(yinzhengjie)
-	//fmt.Println(yinzhengjie == nil)
+	//fmt.Println(henry)
+	//fmt.Println(henry == nil)
 
 	////字典的修改操作
-	//yinzhengjie := make(map[int]string)
+	//henry := make(map[int]string)
 	//letter := []string{"a", "b", "c", "d", "e", "f", "g", "h"}
 	//
 	//for k, v := range letter {
-	//	yinzhengjie[k] = v
+	//	henry[k] = v
 	//}
-	//fmt.Printf("修改之前的样子：【%v】\n", yinzhengjie)
-	//yzj := yinzhengjie
-	//yzj[0] = "尹正杰"
-	//yzj[1] = "yinZhengjie"
-	//fmt.Printf("修改之后的样子：【%v】\n", yinzhengjie)
+	//fmt.Printf("修改之前的样子：【%v】\n", henry)
+	//yzj := henry
+	//yzj[0] = "亨利"
+	//yzj[1] = "henry"
+	//fmt.Printf("修改之后的样子：【%v】\n", henry)
 
 	//// 字典的查询方式
-	//yinzhengjie := make(map[int]string)
+	//henry := make(map[int]string)
 	//letter := []string{"a", "b", "c", "d", "e", "f", "g", "h"}
 	//for k, v := range letter {
-	//	yinzhengjie[k] = v
+	//	henry[k] = v
 	//}
-	//fmt.Println(yinzhengjie)
-	//for i, j := range yinzhengjie {
+	//fmt.Println(henry)
+	//for i, j := range henry {
 	//	fmt.Println("key = ", i, "value = ", j)
 	//}
-	//for i := range yinzhengjie {
+	//for i := range henry {
 	//	fmt.Println(i)
 	//}
 
@@ -91,11 +97,11 @@ func main() {
 	dict := make(map[int]*Student)
 	dict[1] = &Student{
 		ID:   100,
-		NAME: "yinZHenGJie",
+		NAME: "henry",
 	}
 	dict[2] = &Student{
 		ID:   200,
-		NAME: "尹正杰",
+		NAME: "亨利",
 	}
 
 	fmt.Println(dict[1])
@@ -105,19 +111,19 @@ func main() {
 	fmt.Println(dict[1])
 
 	////判断map键值是否存在
-	//yinzhengjie := make(map[int]string)
+	//henry := make(map[int]string)
 	//letter := []string{"a", "b", "c", "d", "e", "f", "g", "h"}
 	//for k, v := range letter {
-	//	yinzhengjie[k] = v
+	//	henry[k] = v
 	//}
-	//fmt.Printf("字典中的值为:[%v]\n", yinzhengjie)
-	//if v, ok := yinzhengjie[1]; ok {
+	//fmt.Printf("字典中的值为:[%v]\n", henry)
+	//if v, ok := henry[1]; ok {
 	//	fmt.Println("存在key = ", v)
 	//} else {
 	//	fmt.Println("没有找到key = ", v)
 	//}
 	//
-	//v, ok := yinzhengjie[1]
+	//v, ok := henry[1]
 	//if ok {
 	//	fmt.Println("再一次确认，已经存在key = ", v)
 	//} else {
@@ -151,7 +157,7 @@ func main() {
 	//type EmployeeInformation map[string]int
 	//StaffQuarters := make(map[string]EmployeeInformation)
 	//EmployeeNumber := make(EmployeeInformation)
-	//EmployeeNumber["yinzhengjie"] = 23
+	//EmployeeNumber["henry"] = 23
 	//EmployeeNumber["bingan"] = 24
 	//
 	//StaffQuarters["888"] = EmployeeNumber
@@ -217,9 +223,9 @@ func main() {
 
 	//// 定义一个集合的思想
 	//set := make(map[string]bool)
-	//set["yinzhengjie"] = true
-	//if set["yinzhengjie"] {
-	//	fmt.Printf("已经存在名为yizhengjie的key，其值为【%v】\n", set["yinzhengjie"])
+	//set["henry"] = true
+	//if set["henry"] {
+	//	fmt.Printf("已经存在名为yizhengjie的key，其值为【%v】\n", set["henry"])
 	//} else {
 	//	fmt.Println("该变量不存在！")
 	//}
@@ -236,8 +242,8 @@ func main() {
 		Blog string
 	}
 	BlogAddress := make(map[string]*NameType)
-	BlogAddress["yinzhengjie"] = &NameType{"http://www.baidu.com"}
+	BlogAddress["henry"] = &NameType{"http://www.baidu.com"}
 
 	fmt.Println(BlogAddress)
-	fmt.Println(BlogAddress["yinzhengjie"])
+	fmt.Println(BlogAddress["henry"])
 }
